@@ -1,0 +1,11 @@
+Category	Occurrence	Description
+1.1	103	Genes with 100% identity over a complete cDNA with defined functional association (for example, transcription factor, kinase).
+1.2	24	Genes with 100% identity over a complete cDNA corresponding to a gene of unknown function (for example, some of the KIAA series of large cDNAs).
+2.1	12	Genes showing similarity or homology to a characterized cDNA from any organism (25–100% amino-acid identity).
+2.2	1	Genes with similarity to a putative ORF predicted in silico from the genomic sequence of any organism but which currently lacks experimental verification.
+3.1	13	Genes with amino-acid similarity confined to a protein region specifying a functional domain (for example, zinc fingers, immunoglobulin domains).
+3.2	4	Genes with amino-acid similarity confined to regions of a known protein without known functional association.
+4.1	15	Predicted genes composed of a pattern of two or more consistent exons (located within <20 kb) and supported by spliced EST match(es).
+4.2	21	Predicted genes corresponding to spliced EST(s) but which failed to be recognized by exon prediction programs.
+4.3	32	Predicted genes composed only of a pattern of consistent exons without any matches to ETS(s) or cDNA.
+5	59	Pseudogenes may be regarded as gene-derived DNA sequences that are no longer capable of being expressed as protein products.

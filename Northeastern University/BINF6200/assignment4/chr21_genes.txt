@@ -1,0 +1,286 @@
+Gene Symbol	Description	Category
+TPTE	tensin, putative protein-tyrosine phosphatase, EC 3.1.3.48.	1.1
+CYC1LP4	cytochrome c pseudogene	5
+Pseudo1	putative zinc finger protein pseudogene	5
+PRED1	putative gene, protein kinase C ETA type (EC 2.7.1.) like	3.2
+ORLP1	pheromone receptor pseudogene	5
+Pseudo1.1	pseudogene similar to cDNA DKFZp586E1423	5
+Pseudo2	tubulin tyrosine ligase-like 1 pseudogene	5
+EIF3S5P	eucaryotic initiation factor-3, subunit 5 pseudogene	5
+PRED65	putative gene with similarity to zinc finger proteins	2.2
+PRED3	putative gene, proto-oncogene protein precursor like	3.1
+PRED4	putative gene with similarities to KIAA1074 and KIAA0565	3.2
+ORLP2	pheromone receptor pseudogene	5
+CNN2P	calponin P pseudogene	5
+C21orf15	spliced EST AJ003450	4.2
+CYP4F3LP	cytochrome P450 pseudogene	5
+NF1L1P	neurofibromatosis type 1 pseudogene	5
+PRED5	putative gene, lipase (EC 3.1.1.3) like	3.1
+RBM11	putative gene, RNA binding motif protein 11 like	3.1
+PRED6	putative gene, multidrug resistance associated protein like	3.1
+STCH	human microsomal stress 70 protein ATPase core	1.1
+SAMSN-1	gene with homology to KIAA0790 protein	1.2
+POLR2CP	pseudogene similar to RNA polymerase H subunits	5
+NRIP1	nuclear factor RIP140	1.1
+CYC1LP5	cytochrome C pseudogene	5
+RAD23BLP	UV excision repair protein pseudogene	5
+USP25	ubiquitin specific protease USP25	1.1
+RBPMSLP	RNA-binding protein hermes pseudogene	5
+C21orf34	spliced EST AA451643	4.1
+VDAC2P	voltage-dependent anion channel isoform 2 pseudogene	5
+C21orf35	spliced EST AW242517	4.1
+C21orf36	spliced EST AA017197	4.2
+C21orf37	spliced EST N47348	4.2
+CXADR	46 kD coxsackievirus and adenovirus receptor (CAR) protein	1.1
+BTG3	B-cell translocation gene	1.1
+YG81	gene of unknown function, spliced variant EST AI126619	1.1
+C21orf39	spliced EST T74237	4.2
+RL37P	human ribosomal protein L37 pseudogene	5
+PRED12	putative gene, membrane protein like	3.1
+PRSS7	human enterokinase; EC 3.4.21.9.	1.1
+SLC6A6P	taurine transporter processed pseudogene	5
+RL37P2	human ribosomal protein L37 pseudogene	5
+C1QBPP	human splicing factor 2 hyaluronic acid-binding protein (SF2p32) pseudogene	5
+C21orf40	spliced EST AA412132	4.2
+FDPSP	farnesyl pyrophosphate synthetase processed pseudogene	5
+KRT18P2	cytokeratin 18 processed pseudogene	5
+RPS3AP	ribosomal protein S3 processed pseudogene	5
+PRED14	human cDNA clone 280692	1.2
+PPIAP	cyclophilin-related processed pseudogene	5
+NCAM2	neural cell adhesion molecule 2 precursor	1.1
+PRED15	exon prediction only	4.3
+PRED16	spliced EST AI188136	4.1
+Pseudo3	ETS-like processed pseudogene	5
+Pseudo4	ERK3 protein kinase pseudogene	5
+ZNF299P	zinc finger-like processed pseudogene	5
+EEF1A1P	human elongation factor EF-1-alpha processed pseudogene	5
+TUBAP	alpha tubulin (TUBA2) processed pseudogene	5
+C21orf53	spliced EST W73844	4.2
+RPL13AP	ribosomal protein RPL13A pseudogene	5
+C21orf42	spliced EST AA442272	4.1
+PRED21	spliced EST AI016585	4.2
+PRED66	spliced EST N23422	4.1
+PRED22	complete cDNA FLJ20451	1.2
+C21orf43	gene similar to mouse junctional adhesion molecule, spliced EST AA725566	2.1
+FDXP2	adrenodoxin pseudogene	5
+ATP5A	human mitochondrial ATPase coupling factor 6 subunit	1.1
+GABPA	human nuclear respiratory factor-2 subunit alpha	1.1
+APP	human mRNA for amyloid A4 precursor of Alzheimer's disease	1.1
+PRED24	gene similar to MARCKS, cDNA DKFZp564P1664	2.1
+ADAMTS1	human metalloproteinase with thrombospondin type 1 motifs	1.1
+ADAMTS5	disintegrin-like and metalloprotease with thrombospondin type 1 motif, 5	1.1
+GPXP2	human glutathione peroxidase (GPXP2) pseudogene	5
+PRED25	exon prediction only	4.3
+EIF4A1P	eukaryotic initiation factor 4AI pseudogene	5
+RPL10P	60S ribosomal protein L10 pseudogene	5
+PRED26	exon prediction only	4.3
+D21S2073	KIAA0253 pseudogene	5
+C21orf23	spliced EST AI796012	4.2
+PRED27	exon prediction only	4.3
+PRED28	putative N6-DNA-methyltransferase	1.2
+HSPDP7	human chaperonin pseudogene	5
+ZNF294	human mRNA for KIAA0714 protein	1.2
+RPL23P2	60S ribosomal protein L23 pseudogene	5
+C21orf6	chromosome 21 open reading frame 6	1.1
+USP16	human ubiquitin processing protease, EC 3.1.2.15.	1.1
+CCT8	T-complex protein 1, theta subunit	1.1
+C21orf7	putative gene, TGF-beta-activated kinase like	3.1
+GAPDP14	glycerinaldehyde-3-phosphate dehydrogenase pseudogene	5
+BACH1	transcription regulator protein	1.1
+C21orf12	spliced EST R82144 (trapped exon)	4.2
+C21orf8	spliced EST AA843704	4.1
+GRIK1	human glutamate receptor (GLUR5)	1.1
+C21orf41	spliced EST N45393	4.1
+C21orf9	spliced EST W58369, nuclear factor	4.2
+CLDN17	human CLDN17 gene for claudin-17	1.1
+CLDN8	human CLDN8 gene for claudin-8	1.1
+PRED29	exon prediction only	4.3
+PRED30	exon prediction only	4.3
+UBE3AP2	ubiquitin protein ligase, processed pseudogene	5
+TIAM1	human T-lymphoma invasion and metastasis inducing TIAM1 protein	1.1
+PRED31	exon prediction only	4.3
+BTRC2P	pseudogene similar to BTRC	5
+SOD1	Cu,Zn superoxide dismutase, EC 1.15.1.1.	1.1
+CTBP2	C-terminal binding protein 2	1.1
+HMG14P	nonhistone chromosomal protein HMG-14 pseudogene	5
+PRED33	putative serine threonin kinase, homolog to mouse MAK5 AF055919	1.1
+C21orf44	spliced EST AW138869	4.2
+C21orf45	spliced EST AI369385	4.1
+KIAA0539	human mRNA for KIAA0539 protein	1.2
+PRED34	putative gene, similar to C. elegans P91865, spliced EST H51862	3.2
+C21orf47	spliced EST H51284	4.2
+TCP10L	gene similar to TCP10, spliced ESTs AA465232,T18865	2.1
+SYNJ1	synaptojanin-1, polyphosphoinositide phosphatase	1.1
+GCFC	human GC-rich sequence DNA-binding factor candidate	1.1
+C21orf49	spliced EST T19019	4.1
+PRED36	exon prediction only	4.3
+PRKCBP2	human protein kinase C-binding protein RACK17	1.1
+C21orf54	spliced EST AA934973	4.2
+IFNAR2	human interferon alpha,beta receptor	1.1
+IL10RB	human transmembrane receptor protein; cytokine receptor	1.1
+IFNAR1	human interferon-alpha receptor (HuIFN-alpha-Rec)	1.1
+IFNGR2	interferon-gamma receptor beta chain precursor	1.1
+C21orf4	chromosome 21 open reading frame 4 (Interferon receptor cluster)	1.2
+RPS5L	human ribosomal protein S5 mRNA, complete cds	1.1
+C21orf55	spliced ESTs AA233864,AA232809	4.2
+GART	phosphoribosylglycinamide formyltransferase, EC 2.1.2.2.	1.1
+C21orf50	spliced EST AA658915	4.1
+SON	SON DNA-binding protein, KIAA1019	1.1
+CRYZL1	human quinone oxidoreductase homolog-1	1.1
+ITSN	human intersectin-SH3 domain-containing protein SH3P17	1.1
+ATP5O	human ATP synthase OSCP subunit, oligomycin sensitivity conferring protein	1.1
+SLC5A3	human solute carrier family 5, member 3, Sodium,myo-inositol cotransporter	1.1
+PRED37	exon prediction only	4.3
+KCNE2	human minK-related peptide 1, potassium channel subunit, MiRP1	1.1
+C21orf51	spliced EST AA306264	4.1
+PRED38	exon prediction only	4.3
+KCNE1	human cardiac delayed rectifier potassium channel protein	1.1
+DSCR1	human Down syndrome candidate region protein, proline-rich protein	1.1
+PRED39	exon prediction only	4.3
+CLIC1L	putative gene, p64 chloride channel like, spliced ESTs T92523,T91760	3.1
+C21orf52	spliced EST AI761253	4.1
+RUNX1	acute myeloid leukemia 1 protein (oncogene AML-1), core-binding factor, alpha subunit	1.1
+RPL34P3	pseudogene with similarity to ribosomal protein L34	5
+RPS20P	pseudogene with similarity to ribosomal protein S20	5
+PPP1R2P2	protein phosphatase inhibitor 2 pseudogene	5
+PRED40	exon prediction only	4.3
+RPL23AP3	ribosomal protein L23A pseudogene	5
+C21orf18	spliced EST AK001660	1.2
+RIMKLP	pseudogene for KIAA1238 protein, similar to bacterial ribosomal S6 modification protein	5
+C21orf27	spliced EST AI685287	4.2
+CBR1	carbonyl reductase (NADPH) 1, EC 1.1.1.184.	1.1
+C21orf19	unspliced ORF	5
+RPS9P	ribosomal protein S9 pseudogene	5
+CBR3	carbonyl reductase (NADPH) 3, EC 1.1.1.184.	1.1
+C21orf5	chromosome 21 open reading frame 5	1.1
+RPL3P	ribosomal protein L3 pseudogene	5
+SFRS9P1	splicing factor pseudogene	5
+RPS26P	ribosomal protein S26 pseudogene	5
+KIAA0136	human mRNA for KIAA0136 protein	1.1
+CHAF1B	human chromatin assembly factor-I p60 subunit	1.1
+ATP5J2LP	F1Fo-ATPase synthase f subunit pseudogene	5
+CLDN14	human CLDN14 gene	1.2
+PSMD4P	proteasome 26S subunit pseudogene	5
+PRED41	exon prediction only	4.3
+SIM2	human transcription factor SIM2, homolog of the Drosophila single-minded gene SIM1	1.1
+HLCS	holocarboxylase synthetase, EC 6.3.4.	1.1
+DSCR5	human Down syndrome critical region protein C	1.1
+TTC3	tetratricopeptide repeat protein 3 (TPR repeat protein D)	1.1
+DSCR3	Down syndrome critical region protein A	1.1
+DYRK1A	dual-specificity tyrosine-Y-phosphorylation regulated kinase, EC 2.7.1.	1.1
+KCNJ6	human G protein coupled inward rectifier potassium channel 2 (hiGIRK2)	1.1
+DSCR4	Down syndrome critical region protein B	1.1
+KCNJ15	inwardly rectifing potassium channel Kir4.2.	1.1
+ERG	transcriptional regulator ERG (transforming protein ERG)	1.1
+C21orf24	spliced EST AI492145	4.2
+ETS2	human erythroblastosis virus oncogene homolog 2	1.1
+RPL23AP5	60S ribosomal protein pseudogene	5
+PCBP2P1	heteronucleotide ribosomal protein pseudogene	5
+DSCR2	leucine rich protein C21-LRP	1.2
+N143	human mRNA; transcriptional unit N143	1.1
+WDR9	gene homolog to cAMP response element binding and beta-tranducin family	1.2
+HMG14	human non-histone chromosomal protein HMG-14	1.1
+WRB	tryptophan-rich protein, congenital heart disease 5 protein	1.2
+C21orf13	hypothetical 76.5 kD protein, O95447, myosin heavy chain and kinesin homology	3.1
+SH3BGR	21-Glutamic Acid-Rich Protein (21-GARP)	1.1
+B3GALT5	GlcNAc-beta-1,3-galactosyltransferase 5	1.1
+IGSF5	putative gene, immunoglobulin superfamily 5 like	3.1
+PCP4	brain specific polypeptide PEP19	1.1
+DSCAM	human CHD2-52 down syndrome cell adhesion molecule	1.1
+PRED42	exon prediction only	4.3
+BACE2	beta-site APP-cleaving enzyme 2, EC 3.4.23.	1.1
+PRED43	exon prediction only	4.3
+PRED44	putative gene containing transmembrane domain	3.1
+C21orf11	gene similar to 2-19 protein	2.1
+MX2	human interferon-regulated resistance GTP-binding protein MXB	1.1
+MX1	human interferon-regulated resistance GTP-binding protein MXA	1.1
+TMPRSS2	transmembrane protease, serine 2, EC 3.4.21.	1.1
+C21orf20	spliced EST AW138631	4.2
+C21orf21	spliced EST AA969880	4.2
+C21orf22	spliced EST AA435939	4.2
+ANKRD3	putative gene, ankirin like, possible dual-specificity Ser,Thr,Tyr kinase domain	3.1
+ZNF298	putative gene containing C2 domain, spliced EST AA490433	3.1
+C21orf25	human cDNA DKFZp586F0422, AL050173	1.2
+ZNF295	gene similar to zinc finger 5 protein	2.1
+UMODL1	gene similar to uromodulin	2.1
+PRED46	exon prediction only	4.3
+ABCG1	white protein homolog (ATP-binding cassette transporter 8)	1.1
+TFF3	trefoil factor 3, HITF, human intestinal trefoil factor	1.1
+TFF2	trefoil factor 2, SML1, human spasmolytic polypeptide (SP)	1.1
+TFF1	trefoil factor, BCE1, human pS2 induced by estrogen from human breast cancer cell line M	1.1
+TMPRSS3	gene similar to transmembrane serine protease	2.1
+UBASH3A	gene similar to UBA containing SH3 domain	2.1
+TSGA2	human homolog to mouse testis specific gene 2	1.2
+SLC37A1	gene similar to glycerol-3-phosphate permease	2.1
+PDE9A	CGMP-specific 3',5'-cyclic phosphodiesterase type 9, EC 3.1.4.17.	1.1
+WDR4	WD repeat domain 4	1.2
+NDUFV3	NADH-ubiquinone oxidoreductase 9 kD subunit precursor, EC 1.6.5.3.	1.1
+PKNOX1	human homeobox-containing protein	1.1
+CBS	human cystathionine-beta-synthase, EC 4.2.1.22.	1.1
+U2AF1	human U2 snRNP auxiliary factor small subunit	1.1
+CRYAA	human alphaA-crystallin (CRYA1)	1.1
+HSF2BP	heat shock transcription factor 2 binding protein	1.1
+PRED47	exon prediction only	4.3
+PRED48	exon prediction only	4.3
+SNF1LK	gene similar to rat protein kinase (KID2)	2.1
+PRED49	exon prediction only	4.3
+PRED50	exon prediction only	4.3
+PRED51	exon prediction only	4.3
+RPL31P	ribosomal protein L31 pseudogene	5
+H2BFS	H2B histone family S member	1.1
+KIAA0179	human mRNA for KIAA0179 protein	1.2
+PDXK	human pyridoxal kinase, EC 2.7.1.35.	1.1
+CSTB	cystatin B (liver thiol proteinase inhibitor)	1.1
+D21S2056E	human NNP-1,Nop52 (NNP-1), novel nuclear protein 1	1.1
+PRED52	exon prediction only	4.3
+MYL6P	myosine alkali light chain 6 pseudogene	5
+AGPAT3	gene similar to plant lysophosphatidic acid acyltransferase	2.1
+TMEM1	epilepsy holoprosencephaly candidate-1 protein	1.2
+H2AFZP	histone H2AZ pseudogene	5
+PWP2H	periodic tryptophan protein 2 homolog	1.1
+C21orf33	human HES1 protein, homolog to E.coli and zebrafish ES1 protein	1.2
+C21orf32	putative gene with similarities to yeast gene YDL038c	3.2
+KIAA0653	human mRNA for KIAA0653 protein	1.2
+DNMT3L	human cytosine-5-methyltransferase 3-like protein	1.2
+AIRE	autoimmune regulator (APECED protein)	1.1
+PFKL	human liver-type 1-phosphofructokinase, EC 2.7.1.11.	1.1
+C21orf2	nuclear encoded mitochondrial protein, cDNA A2-YF5	1.2
+TRPC7	transient receptor potential-related channel 7, a novel putative Ca2+ channel protein	1.1
+C21orf30	intronless long ORF, AL117578	1.2
+C21orf29	spliced partial mRNA	4.2
+C21orf31	spliced EST AJ003549,AJ003550,AJ003554	4.2
+PRED53	exon prediction only	4.3
+KAPcluster	keratin associated proteins, gene cluster	
+IMMTP	motorprotein pseudogene	5
+UBE2G2	human ubiquitin conjugating enzyme G2	1.1
+SMT3H1	ubiquitin-like protein, a human homolog of the S. cerevisiae SMT3 gene	1.1
+C21orf1	putative surface glycoprotein C21orf1 precursor	1.1
+ITGB2	cell surface adhesion glycoprotein (LFA-1,CR3,P150,959 beta subunit precursor)	1.1
+PRED54	exon prediction only	4.3
+PRED55	exon prediction only	4.3
+PRED56	exon prediction only	4.3
+ADARB1	human dsRNA adenosine deaminase DRADA2b, EC 3.5.	1.1
+PRED57	exon prediction only	4.3
+PRED58	exon prediction only	4.3
+KIAA0958	human mRNA for KIAA0958 protein	1.2
+PRED59	exon prediction only	4.3
+COL18A1	human type XVIII collagen	1.1
+SLC19A1	human reduced folate carrier (RFC)	1.1
+PRED60	exon prediction only	4.3
+PRED61	exon prediction only	4.3
+PCBP3	poly (rC)-binding protein 3	2.1
+PRED62	putative gene containing transmembrane domain	3.1
+COL6A1	human mRNA for collagen VI alpha-1 C-terminal globular domain	1.1
+PRED63	exon prediction only	4.3
+COL6A2	human mRNA for collagen VI alpha-2 C-terminal globular domain	1.1
+FTCD	human formiminotransferase cyclodeaminase, EC 4.3.1.4.	1.1
+C21orf56	spliced EST AA262598	4.1
+LSS	human lanosterol synthase, EC 5.4.99.7.	1.1
+MCM3	human mRNA for MCM3 import factor	1.1
+C21orf57	spliced EST AI702440	4.1
+C21orf58	spliced ESTs Z25278,AA825266	4.1
+PCNT	pericentrin, kendrin (KIAA0402)	1.1
+KIAA0184	human mRNA for KIAA0184 protein	1.2
+S100B	S-100 calcium-binding protein, beta chain	1.1
+HRMT1L1	protein arginine N-methyltransferase 2, EC 2.1.1.	1.1
+RPL23AP4	ribosomal protein L23A pseudogene	5

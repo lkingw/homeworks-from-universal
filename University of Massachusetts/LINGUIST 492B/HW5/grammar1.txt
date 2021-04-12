@@ -1,0 +1,85 @@
+# This grammar uses a convention that
+#    - terminals are lowercase          (president)
+#    - preterminals are capitalized     (Noun)
+#    - other nonterminals are all-caps  (NP)
+# 
+# This convention just makes grammars more readable to humans.  Thus:
+#
+#    - When *you* are writing grammars, you should 
+#      follow this convention unless you have a good reason not to.  
+#
+#    - But your *program* should still work with grammars that don't 
+#      follow this convention.  It should not pay any attention to
+#      upper/lower case.  From your program's point of view, 
+#      if there is at least one rule for rewriting a symbol, then
+#      that symbol is a nonterminal and should be rewritten.
+#######################
+
+# Sample generated sentences
+#######################
+# the president kissed the floor . 
+# a fine delicious fine perplexed perplexed president with the floor ate the sandwich . 
+# the floor understood the fine delicious sandwich . 
+# a chief of staff understood the president . 
+# the chief of staff kissed a chief of staff .
+# the pickled president understood every delicious fine sandwich . 
+# the fine fine pickled pickle under a perplexed pickle in the fine pickled fine pickle in every pickled fine floor with a perplexed floor understood the fine sandwich . 
+# the president kissed a floor . 
+# the pickle understood a delicious delicious fine pickled sandwich . 
+# is it true that the sandwich wanted a floor ? 
+#######################
+
+# Rules for creating full sentences.
+
+10 ROOT	S .
+3 ROOT	S !
+# mixing terminals and nonterminals is ok.
+1 ROOT	is it true that S ?
+
+# The basic grammar rules.  Here's what the abbreviations stand for:
+#    S  = sentence
+#    NP = noun phrase
+#    VP = verb phrase
+#    PP = prepositional phrase
+#    Det = determiner (sometimes called "article")
+#    Prep = preposition
+#    Adj = adjective
+
+1 S	NP VP
+1 VP	Verb NP
+5 NP	Det Noun
+1 NP	NP PP
+1 PP	Prep NP
+3 Noun	Adj Noun
+
+# Vocabulary.  Your program can see that "ate" is a terminal
+# symbol because there exists no rule for rewriting it.
+# Any symbol that can rewrite as a terminal (or a string of 
+# terminals, like "chief of staff") is called a "preterminal."  Notice 
+# that a preterminal is a special kind of nonterminal.
+
+5 Verb	ate
+5 Verb	wanted
+2 Verb	kissed
+5 Verb	understood
+1 Verb	pickled
+
+5 Det	the
+5 Det	a
+1 Det	every
+
+1 Noun	president
+1 Noun	sandwich
+1 Noun	pickle
+1 Noun	chief of staff
+1 Noun	floor
+
+1 Adj	fine
+1 Adj	delicious
+1 Adj	perplexed
+1 Adj	pickled
+
+1 Prep	with
+1 Prep	on
+1 Prep	under
+1 Prep	in

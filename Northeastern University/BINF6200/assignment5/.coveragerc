@@ -1,0 +1,5 @@
+[run]
+omit =
+      test_*
+      *__init__.py
+      /usr/local/lib/python*
