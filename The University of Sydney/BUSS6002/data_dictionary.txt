@@ -1,0 +1,32 @@
+The database consists of three tables "ci_transaction", "study_area" and "drink".
+
+Below is the data dictionary and notes on variables.
+
+------------------------------------------------------
+ci_transaction
+
+- id: unique transaction id (int)
+- date: transaction date (string)
+- days_after_open: number of days since opening the pop-up store on 2019-07-22 (int)
+- day_of_week: day of the week (string, 'Mon' - 'Sun')
+- hours_after_open: number of hours since opening at 7pm (int, 0 - 5)
+- drink_id: id of the drink being purchased (int, 0 - 16)
+- quantity: quantity of purchase (int)
+- raining: whether it is raining at the time of purchase (string, 'Yes', 'No', missing indicated by 'NA')
+- study_area_id: id of the customer's study area (int, 0 - 6, missing indicated by -1)
+
+
+------------------------------------------------------
+study_area
+
+- id: unique study area id (int, 0 - 6)
+- name: building name (string)
+- dist_to_cafe: distance to cafe insomnia (in meters) (int)
+
+------------------------------------------------------
+drink
+
+- id: unique drink id (int, 0 - 16)
+- name: drink name (string)
+- unit_price: unit price of the drink in AUD (float)
+

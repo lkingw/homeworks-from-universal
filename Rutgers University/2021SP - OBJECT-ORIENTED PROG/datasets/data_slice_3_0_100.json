@@ -1,0 +1,503 @@
+[
+    {
+        "abstract": "Times reporters answered questions from readers about getting the vaccine, what to expect and what happens next.",
+        "core": "Answers to All Your Questions About Getting Vaccinated for Covid-19",
+        "date": "2021-01-27T23:27:22+0000",
+        "keywords": [
+            "Coronavirus (2019-nCoV)",
+            "Coronavirus Risks and Safety Concerns",
+            "Vaccination and Immunization",
+            "Content Type: Service"
+        ],
+        "persons": []
+    },
+    {
+        "abstract": "Here\u2019s what you need to know at the end of the day.",
+        "core": "Climate Change, Capitol Hill, Cloris Leachman: Your Wednesday Evening Briefing",
+        "date": "2021-01-27T23:02:31+0000",
+        "keywords": [],
+        "persons": [
+            {
+                "firstname": "Remy",
+                "lastname": "Tumin",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            },
+            {
+                "firstname": "Marcus",
+                "lastname": "Payadue",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 2,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "The complex and arcane budget reconciliation process would ease passage of President Biden\u2019s stimulus bill, but it could also limit what he is able to accomplish with the plan.",
+        "core": "How Biden Could Use Reconciliation to Speed Through His Pandemic Aid Plan",
+        "date": "2021-01-27T22:40:37+0000",
+        "keywords": [
+            "United States Politics and Government",
+            "Federal Budget (US)",
+            "Stimulus (Economic)",
+            "Coronavirus (2019-nCoV)",
+            "Democratic Party",
+            "Senate",
+            "Biden, Joseph R Jr",
+            "Byrd, Robert C"
+        ],
+        "persons": [
+            {
+                "firstname": "Emily",
+                "lastname": "Cochrane",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "President Biden\u2019s top coronavirus advisers held their first public briefing.",
+        "core": "Coronavirus Briefing: What Happened Today",
+        "date": "2021-01-27T22:11:13+0000",
+        "keywords": [
+            "Coronavirus (2019-nCoV)"
+        ],
+        "persons": [
+            {
+                "firstname": "Jonathan",
+                "lastname": "Wolfe",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "It took 44 days after the first U.S. coronavirus death was recorded to reach 25,000 deaths. The most recent 25,000 deaths have come in less than a week.",
+        "core": "How 450,000 Coronavirus Deaths Added Up",
+        "date": "2021-01-27T21:18:46+0000",
+        "keywords": [
+            "Coronavirus (2019-nCoV)",
+            "Disease Rates",
+            "Deaths (Fatalities)"
+        ],
+        "persons": [
+            {
+                "firstname": "Lazaro",
+                "lastname": "Gamio",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            },
+            {
+                "firstname": "Lauren",
+                "lastname": "Leatherby",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 2,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "In remarks before the Senate Committee of Veterans Affairs on Wednesday, Denis McDonough, President Biden\u2019s pick for secretary of veterans affairs, emphasized an agenda focused on guiding the department through the coronavirus pandemic and helping more veterans access care, assisting them with employment and reducing homelessness and suicide among veterans.",
+        "core": "Denis McDonough, Biden\u2019s nominee for V.A. secretary, tells senators he\u2019ll prioritize care access amid pandemic.",
+        "date": "2021-01-27T21:04:24+0000",
+        "keywords": [
+            "McDonough, Denis R",
+            "United States Politics and Government",
+            "Senate",
+            "Veterans Affairs Department",
+            "Veterans",
+            "Coronavirus (2019-nCoV)"
+        ],
+        "persons": [
+            {
+                "firstname": "Jennifer",
+                "lastname": "Steinhauer",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "Hoping to reduce the spread of the coronavirus variant, Britain announced on Wednesday it will require citizens arriving home from high-risk countries to quarantine in hotels for 10 days at their own expense.",
+        "core": "Britain Cracks Down on International Travel",
+        "date": "2021-01-27T20:18:07+0000",
+        "keywords": [
+            "Great Britain",
+            "Coronavirus (2019-nCoV)",
+            "Quarantines",
+            "Travel Warnings",
+            "Disease Rates"
+        ],
+        "persons": []
+    },
+    {
+        "abstract": "Spain has suspended vaccinations in Madrid because of a shortfall of doses, as the European Union locks horns with the drugmaker AstraZeneca over vaccine delivery cuts.",
+        "core": "Vaccine Shortages Hit E.U. in a Setback for Its Immunization Race",
+        "date": "2021-01-27T20:09:47+0000",
+        "keywords": [
+            "Vaccination and Immunization",
+            "Politics and Government",
+            "Coronavirus (2019-nCoV)",
+            "Drugs (Pharmaceuticals)",
+            "European Commission",
+            "European Union",
+            "AstraZeneca PLC",
+            "Europe",
+            "France",
+            "Germany",
+            "Great Britain",
+            "Spain"
+        ],
+        "persons": [
+            {
+                "firstname": "Matina",
+                "lastname": "Stevis-Gridneff",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            },
+            {
+                "firstname": "Monika",
+                "lastname": "Pronczuk",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 2,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "The authorities appeared to gear up for a new legal strike against the opposition leader after demonstrations last weekend drew tens of thousands to the streets.",
+        "core": "Navalny Allies and Offices Targeted in Raids as Kremlin Turns Up Pressure",
+        "date": "2021-01-27T19:59:31+0000",
+        "keywords": [
+            "Corruption (Institutional)",
+            "Search and Seizure",
+            "Navalny, Aleksei A",
+            "Putin, Vladimir V",
+            "Moscow (Russia)",
+            "Russia",
+            "Alburov, Georgy",
+            "Sobol, Lyubov",
+            "Zhdanov, Ivan Y"
+        ],
+        "persons": [
+            {
+                "firstname": "Anton",
+                "lastname": "Troianovski",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "Members of President Biden\u2019s coronavirus response team said they are increasing surveillance of potentially dangerous Covid-19 mutations.",
+        "core": "White House Covid-19 Team Warns of Virus Variants",
+        "date": "2021-01-27T19:44:08+0000",
+        "keywords": [
+            "Coronavirus (2019-nCoV)",
+            "Fauci, Anthony S",
+            "Walensky, Rochelle",
+            "Vaccination and Immunization",
+            "Disease Rates",
+            "United States Politics and Government",
+            "Centers for Disease Control and Prevention",
+            "National Institute for Allergy and Infectious Disease (NIAID)"
+        ],
+        "persons": []
+    },
+    {
+        "abstract": "The move, which comes as Britain is swamped by a fast-spreading variant of the coronavirus, will require British citizens arriving from 22 high-risk countries to quarantine for 10 days.",
+        "core": "Britain Will Make Citizens Quarantine at Hotels at Their Own Expense",
+        "date": "2021-01-27T19:43:12+0000",
+        "keywords": [
+            "Politics and Government",
+            "Travel Warnings",
+            "Coronavirus (2019-nCoV)",
+            "Johnson, Boris",
+            "Great Britain"
+        ],
+        "persons": [
+            {
+                "firstname": "Mark",
+                "lastname": "Landler",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            },
+            {
+                "firstname": "Stephen",
+                "lastname": "Castle",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 2,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "The 2021 edition of the event, which was canceled last year, is now set to take place two months later than planned.",
+        "core": "Cannes Film Festival Is Delayed Until July Because of Pandemic",
+        "date": "2021-01-27T18:41:03+0000",
+        "keywords": [
+            "Cannes International Film Festival",
+            "Movies",
+            "Coronavirus (2019-nCoV)",
+            "Cannes (France)"
+        ],
+        "persons": [
+            {
+                "firstname": "Alex",
+                "lastname": "Marshall",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "The death of a beloved educator in Houston, like others across the country, has deepened teachers\u2019 fears and conflict over in-person instruction during the pandemic.",
+        "core": "A Dying Teacher, Worrying Over Students to His Last Breaths",
+        "date": "2021-01-27T18:17:34+0000",
+        "keywords": [
+            "Coronavirus (2019-nCoV)",
+            "Teachers and School Employees",
+            "Workplace Hazards and Violations",
+            "Ortiz, Erick (d 2020)",
+            "Education (K-12)",
+            "Shutdowns (Institutional)",
+            "Deaths (Fatalities)",
+            "Houston (Tex)",
+            "Montgomery (Ala)",
+            "Cobb County (Ga)",
+            "Disease Rates",
+            "States (US)",
+            "United States"
+        ],
+        "persons": [
+            {
+                "firstname": "Dan",
+                "lastname": "Levin",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "We want to hear about a special neighborhood establishment that shut down because of the pandemic, and what that loss has meant.",
+        "core": "What Did Local Businesses That Closed Because of Covid Mean to You?",
+        "date": "2021-01-27T18:10:45+0000",
+        "keywords": [
+            "Shutdowns (Institutional)",
+            "Coronavirus (2019-nCoV)"
+        ],
+        "persons": [
+            {
+                "firstname": "Gillian",
+                "lastname": "Friedman",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "These eight shows that span music, history, literature and fiction would be worthy additions to your podcast queue.",
+        "core": "New Podcasts Worth Checking Out",
+        "date": "2021-01-27T18:08:45+0000",
+        "keywords": [
+            "Podcasts",
+            "Culture (Arts)",
+            "Object of Sound (Radio Program)",
+            "Abdurraqib, Hanif",
+            "Chicano Squad (Radio Program)",
+            "Alonzo, Cristela",
+            "Campu (Radio Program)",
+            "Maruyama, Noah",
+            "Maruyama, Hana",
+            "Lolita Podcast (Radio Program)",
+            "Loftus, Jamie (1993- )",
+            "Teikirisi (Radio Program)",
+            "Rodriguez, Carmen (Podcast Host)",
+            "Guedes, Fryda",
+            "Seen and Not Heard (Radio Program)",
+            "Mincks, Caroline",
+            "TV, I Say With Ashley Ray (Radio Program)",
+            "Ray, Ashley (Comedian)",
+            "Talk Easy With Sam Fragoso (Radio Program)",
+            "Fragoso, Sam",
+            "Lebowitz, Fran"
+        ],
+        "persons": [
+            {
+                "firstname": "Phoebe",
+                "lastname": "Lett",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "Since taking over as the film festival\u2019s director, Tabitha Jackson has had to figure out how to hold a cinema showcase during a pandemic. Her virtual solution starts Thursday.",
+        "core": "With \u2018Warrior Spirit,\u2019 a New Leader Pushes Sundance Forward",
+        "date": "2021-01-27T18:08:10+0000",
+        "keywords": [
+            "Sundance Film Festival (Park City, Utah)",
+            "Jackson, Tabitha",
+            "Sundance Institute",
+            "Park City (Utah)",
+            "Quarantine (Life and Culture)",
+            "Movies",
+            "Content Type: Personal Profile",
+            "Race and Ethnicity",
+            "Documentary Films and Programs",
+            "Coronavirus (2019-nCoV)",
+            "Festivals"
+        ],
+        "persons": [
+            {
+                "firstname": "Nicole",
+                "lastname": "Sperling",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "The agency urged districts to reopen classrooms.",
+        "core": "Schools Can Be Safe, the C.D.C. Says",
+        "date": "2021-01-27T17:55:51+0000",
+        "keywords": [
+            "The Price You Pay for College: An Entirely New Road Map for the Biggest Financial Decision Your Family Will Ever Make (Book)",
+            "Lieber, Ron",
+            "Centers for Disease Control and Prevention",
+            "Coronavirus Reopenings",
+            "Coronavirus Risks and Safety Concerns",
+            "Private and Sectarian Schools",
+            "Education (K-12)",
+            "Coronavirus (2019-nCoV)",
+            "Education",
+            "Content Type: Service",
+            "Colleges and Universities",
+            "Storming of the US Capitol (Jan, 2021)",
+            "E-Learning",
+            "Organized Labor"
+        ],
+        "persons": [
+            {
+                "firstname": "Amelia",
+                "lastname": "Nierenberg",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            },
+            {
+                "firstname": "Adam",
+                "lastname": "Pasick",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 2,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "Some couples seeking a safer wedding are now requiring that their guests get a Covid-19 vaccine before attending.",
+        "core": "You\u2019re Invited to the Wedding, if You Show Proof of Vaccination",
+        "date": "2021-01-27T17:46:22+0000",
+        "keywords": [
+            "Vaccination and Immunization",
+            "Customs, Etiquette and Manners",
+            "Coronavirus (2019-nCoV)",
+            "Marriages"
+        ],
+        "persons": [
+            {
+                "firstname": "Danielle",
+                "lastname": "Braff",
+                "middlename": null,
+                "organization": "",
+                "qualifier": null,
+                "rank": 1,
+                "role": "reported",
+                "title": null
+            }
+        ]
+    },
+    {
+        "abstract": "See the latest charts and maps of coronavirus cases, deaths, hospitalizations and vaccinations in San Juan County, Washington",
+        "core": "San Juan County, Washington Covid Case and Exposure Risk Tracker",
+        "date": "2021-01-27T17:00:00+0000",
+        "keywords": [
+            "Coronavirus (2019-nCoV)",
+            "States (US)",
+            "Deaths (Fatalities)",
+            "United States",
+            "Disease Rates"
+        ],
+        "persons": []
+    }
+]
