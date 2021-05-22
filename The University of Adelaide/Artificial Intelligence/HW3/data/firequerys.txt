@@ -1,0 +1,3 @@
+P(Alarm | Tempering=false, Smoke=true)
+P(Alarm | Tempering=true, Smoke=false)
+P(Tempering | Alarm=true, Smoke=true, Leaving=true)
