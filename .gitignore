@@ -142,3 +142,9 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+
+#Editable files
+.pages
+.doc
+.docx
+.ppt
