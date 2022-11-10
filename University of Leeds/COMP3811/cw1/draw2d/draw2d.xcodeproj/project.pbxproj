@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		386CBC946950B4867C68EAD4 /* surface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D04777CB32AA72E1A319DBC /* surface.cpp */; };
+		B2225248E1B4213ABCC16088 /* image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F9965F022878CA2B1AD6C30 /* image.cpp */; };
+		E1127D6410A44C56EBB18BA4 /* shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DB2014CF0A027FE7FC6078C /* shape.cpp */; };
+		F1C30F3E485079B020C98D7E /* draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4631598649A22BB8CB0ECFC6 /* draw.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		334241FC596871AEC06F683C /* surface.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = surface.inl; path = surface.inl; sourceTree = "<group>"; };
+		3B5888903EC95AC2C035FED0 /* draw.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = draw.hpp; path = draw.hpp; sourceTree = "<group>"; };
+		4631598649A22BB8CB0ECFC6 /* draw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = draw.cpp; path = draw.cpp; sourceTree = "<group>"; };
+		4B451C66716B4C18D87242A6 /* surface.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = surface.hpp; path = surface.hpp; sourceTree = "<group>"; };
+		4DB2014CF0A027FE7FC6078C /* shape.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = shape.cpp; path = shape.cpp; sourceTree = "<group>"; };
+		658B387E8BB16830F2B85EBE /* forward.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = forward.hpp; path = forward.hpp; sourceTree = "<group>"; };
+		7885C1281B73E7DAAA99C768 /* color.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = color.inl; path = color.inl; sourceTree = "<group>"; };
+		7E645E5221528504B0786492 /* color.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = color.hpp; path = color.hpp; sourceTree = "<group>"; };
+		7F9965F022878CA2B1AD6C30 /* image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = image.cpp; path = image.cpp; sourceTree = "<group>"; };
+		7FCE17791544D6AB83E12DB9 /* libdraw2d-debug-macos-clang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libdraw2d-debug-macos-clang.a"; path = "libdraw2d-debug-macos-clang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D04777CB32AA72E1A319DBC /* surface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = surface.cpp; path = surface.cpp; sourceTree = "<group>"; };
+		CB5918F66E473FA8FD6D1F36 /* shape.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = shape.hpp; path = shape.hpp; sourceTree = "<group>"; };
+		F761E0709A5007222975E6B0 /* image.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = image.inl; path = image.inl; sourceTree = "<group>"; };
+		FD407D9AA02EA44C2F5483DA /* image.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = image.hpp; path = image.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56953869A3F82E9B1A172EA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		26904715588991C7D268CD55 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXGroup section */
+		59F5498437A04C360B44CFC4 /* draw2d */ = {
+			isa = PBXGroup;
+			children = (
+				7E645E5221528504B0786492 /* color.hpp */,
+				7885C1281B73E7DAAA99C768 /* color.inl */,
+				4631598649A22BB8CB0ECFC6 /* draw.cpp */,
+				3B5888903EC95AC2C035FED0 /* draw.hpp */,
+				658B387E8BB16830F2B85EBE /* forward.hpp */,
+				7F9965F022878CA2B1AD6C30 /* image.cpp */,
+				FD407D9AA02EA44C2F5483DA /* image.hpp */,
+				F761E0709A5007222975E6B0 /* image.inl */,
+				4DB2014CF0A027FE7FC6078C /* shape.cpp */,
+				CB5918F66E473FA8FD6D1F36 /* shape.hpp */,
+				8D04777CB32AA72E1A319DBC /* surface.cpp */,
+				4B451C66716B4C18D87242A6 /* surface.hpp */,
+				334241FC596871AEC06F683C /* surface.inl */,
+				A6C936B49B3FADE6EA134CF4 /* Products */,
+			);
+			name = draw2d;
+			sourceTree = "<group>";
+		};
+		A6C936B49B3FADE6EA134CF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7FCE17791544D6AB83E12DB9 /* libdraw2d-debug-macos-clang.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2504643F962705314BEDB27F /* draw2d */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44D080C8923376FA08527708 /* Build configuration list for PBXNativeTarget "draw2d" */;
+			buildPhases = (
+				C67CB90913DFAF3B89FEAF49 /* Resources */,
+				3029D2607D8CC892F3ABC8A0 /* Sources */,
+				56953869A3F82E9B1A172EA9 /* Frameworks */,
+				26904715588991C7D268CD55 /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = draw2d;
+			productName = draw2d;
+			productReference = 7FCE17791544D6AB83E12DB9 /* libdraw2d-debug-macos-clang.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "draw2d" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 59F5498437A04C360B44CFC4 /* draw2d */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2504643F962705314BEDB27F /* libdraw2d-debug-macos-clang.a */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C67CB90913DFAF3B89FEAF49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3029D2607D8CC892F3ABC8A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1C30F3E485079B020C98D7E /* draw.cpp in Sources */,
+				B2225248E1B4213ABCC16088 /* image.cpp in Sources */,
+				E1127D6410A44C56EBB18BA4 /* shape.cpp in Sources */,
+				386CBC946950B4867C68EAD4 /* surface.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4E2C21AD5AE8D11FCFD33FED /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++1z";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NDEBUG=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OBJROOT = "../_build_/release-macos-clang/macos/release/draw2d";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-mcpu=apple-m1",
+					"-Wall",
+					"-pthread",
+					"-Werror=vla",
+				);
+				OTHER_LDFLAGS = (
+					"-pthread",
+				);
+				SYMROOT = ../lib;
+				USER_HEADER_SEARCH_PATHS = (
+					../third_party/stb/include,
+					../third_party/glad/include,
+					../third_party/glfw/include,
+				);
+			};
+			name = release;
+		};
+		68FD08280149EDDA2F90EE68 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../lib;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "draw2d-release-macos-clang";
+			};
+			name = release;
+		};
+		BD15CEB30F9BF9A5E1E05CF3 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++1z";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OBJROOT = "../_build_/debug-macos-clang/macos/debug/draw2d";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-mcpu=apple-m1",
+					"-Wall",
+					"-pthread",
+					"-Werror=vla",
+				);
+				OTHER_LDFLAGS = (
+					"-pthread",
+				);
+				SYMROOT = ../lib;
+				USER_HEADER_SEARCH_PATHS = (
+					../third_party/stb/include,
+					../third_party/glad/include,
+					../third_party/glfw/include,
+				);
+			};
+			name = debug;
+		};
+		E6E0C9AE2AF49AE01EC61FEE /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../lib;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "draw2d-debug-macos-clang";
+			};
+			name = debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "draw2d" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD15CEB30F9BF9A5E1E05CF3 /* debug */,
+				4E2C21AD5AE8D11FCFD33FED /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		44D080C8923376FA08527708 /* Build configuration list for PBXNativeTarget "libdraw2d-debug-macos-clang.a" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6E0C9AE2AF49AE01EC61FEE /* debug */,
+				68FD08280149EDDA2F90EE68 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+/* End XCConfigurationList section */
+};
+rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

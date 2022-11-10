@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+	version = "1.0">
+	<FileRef
+		location = "group:main/main.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:draw2d/draw2d.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:support/support.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:tests-line/tests-line.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:tests-triangle/tests-triangle.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:vmlib/vmlib.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:third_party/x-glad.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:third_party/x-glfw.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:third_party/x-stb.xcodeproj">
+	</FileRef>
+</Workspace>

@@ -1,0 +1,14 @@
+Target dependency graph (7 targets)
+draw2d in draw2d, no dependencies
+vmlib in vmlib, no dependencies
+support in support, no dependencies
+x-stb in x-stb, no dependencies
+x-glad in x-glad, no dependencies
+x-glfw in x-glfw, no dependencies
+main in main, depends on:
+vmlib in vmlib (explicit)
+support in support (explicit)
+draw2d in draw2d (explicit)
+x-stb in x-stb (explicit)
+x-glad in x-glad (explicit)
+x-glfw in x-glfw (explicit)

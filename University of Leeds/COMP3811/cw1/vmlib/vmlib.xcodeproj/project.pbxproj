@@ -1,0 +1,242 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C1E8BA60F17A8952CC87C8A0 /* empty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4202088870E473A163426C8 /* empty.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8589270028774DB2B79D2D40 /* mat22.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = mat22.hpp; path = mat22.hpp; sourceTree = "<group>"; };
+		B770D1CF289372C1DE5A200F /* libvmlib-debug-macos-clang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libvmlib-debug-macos-clang.a"; path = "libvmlib-debug-macos-clang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4202088870E473A163426C8 /* empty.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = empty.cpp; path = empty.cpp; sourceTree = "<group>"; };
+		F7D4EE94FB45C0C67CB264D4 /* vec2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vec2.hpp; path = vec2.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEBC37BF0FA02FB122B865FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		547473EB4E36305D8835322B /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXGroup section */
+		72387D7A0C54F1EC58903BBA /* vmlib */ = {
+			isa = PBXGroup;
+			children = (
+				E4202088870E473A163426C8 /* empty.cpp */,
+				8589270028774DB2B79D2D40 /* mat22.hpp */,
+				F7D4EE94FB45C0C67CB264D4 /* vec2.hpp */,
+				A6C936B49B3FADE6EA134CF4 /* Products */,
+			);
+			name = vmlib;
+			sourceTree = "<group>";
+		};
+		A6C936B49B3FADE6EA134CF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B770D1CF289372C1DE5A200F /* libvmlib-debug-macos-clang.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F6E2BD541677687BB46B215 /* vmlib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCF7801EFDDB781010F3AE5E /* Build configuration list for PBXNativeTarget "vmlib" */;
+			buildPhases = (
+				4EA3B85F7F87B051929FE69F /* Resources */,
+				B850D1B6E934C9A8FC4CFFF6 /* Sources */,
+				DEBC37BF0FA02FB122B865FF /* Frameworks */,
+				547473EB4E36305D8835322B /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vmlib;
+			productName = vmlib;
+			productReference = B770D1CF289372C1DE5A200F /* libvmlib-debug-macos-clang.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "vmlib" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 72387D7A0C54F1EC58903BBA /* vmlib */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F6E2BD541677687BB46B215 /* libvmlib-debug-macos-clang.a */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4EA3B85F7F87B051929FE69F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B850D1B6E934C9A8FC4CFFF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1E8BA60F17A8952CC87C8A0 /* empty.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C6B7A0483D0ECF635DF0844 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../lib;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "vmlib-debug-macos-clang";
+			};
+			name = debug;
+		};
+		3BF525FE02831D707085443E /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../lib;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "vmlib-release-macos-clang";
+			};
+			name = release;
+		};
+		5C052FE3FF50B9151A218623 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++1z";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NDEBUG=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OBJROOT = "../_build_/release-macos-clang/macos/release/vmlib";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-mcpu=apple-m1",
+					"-Wall",
+					"-pthread",
+					"-Werror=vla",
+				);
+				OTHER_LDFLAGS = (
+					"-pthread",
+				);
+				SYMROOT = ../lib;
+				USER_HEADER_SEARCH_PATHS = (
+					../third_party/stb/include,
+					../third_party/glad/include,
+					../third_party/glfw/include,
+				);
+			};
+			name = release;
+		};
+		CDC9D7691DDD6C1BA05B9DA9 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++1z";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OBJROOT = "../_build_/debug-macos-clang/macos/debug/vmlib";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-mcpu=apple-m1",
+					"-Wall",
+					"-pthread",
+					"-Werror=vla",
+				);
+				OTHER_LDFLAGS = (
+					"-pthread",
+				);
+				SYMROOT = ../lib;
+				USER_HEADER_SEARCH_PATHS = (
+					../third_party/stb/include,
+					../third_party/glad/include,
+					../third_party/glfw/include,
+				);
+			};
+			name = debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "vmlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDC9D7691DDD6C1BA05B9DA9 /* debug */,
+				5C052FE3FF50B9151A218623 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		CCF7801EFDDB781010F3AE5E /* Build configuration list for PBXNativeTarget "libvmlib-debug-macos-clang.a" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C6B7A0483D0ECF635DF0844 /* debug */,
+				3BF525FE02831D707085443E /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+/* End XCConfigurationList section */
+};
+rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

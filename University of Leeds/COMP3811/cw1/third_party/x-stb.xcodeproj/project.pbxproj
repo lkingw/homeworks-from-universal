@@ -1,0 +1,242 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1ABC9D6C7222105E24302BAC /* stb_image_write.c in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC04D4BCD54F8636B48B14 /* stb_image_write.c */; };
+		9E269598CF0A8D8AE222C3D8 /* stb_image.c in Sources */ = {isa = PBXBuildFile; fileRef = C4714640EA9775F2519E6C80 /* stb_image.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2D9145439EB3E635547A9383 /* libx-stb-debug-macos-clang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libx-stb-debug-macos-clang.a"; path = "libx-stb-debug-macos-clang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ADC04D4BCD54F8636B48B14 /* stb_image_write.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stb_image_write.c; path = stb/src/stb_image_write.c; sourceTree = "<group>"; };
+		C4714640EA9775F2519E6C80 /* stb_image.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stb_image.c; path = stb/src/stb_image.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1E51133D2C90925E5E13F73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85397A5F7EFB36D1B8FA389F /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F3C8F6E195903E065944DAE /* x-stb */ = {
+			isa = PBXGroup;
+			children = (
+				C4714640EA9775F2519E6C80 /* stb_image.c */,
+				8ADC04D4BCD54F8636B48B14 /* stb_image_write.c */,
+				A6C936B49B3FADE6EA134CF4 /* Products */,
+			);
+			name = "x-stb";
+			sourceTree = "<group>";
+		};
+		A6C936B49B3FADE6EA134CF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D9145439EB3E635547A9383 /* libx-stb-debug-macos-clang.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58D400C98ACD4B7B04AC8709 /* x-stb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90205992C1045184D41C87D2 /* Build configuration list for PBXNativeTarget "x-stb" */;
+			buildPhases = (
+				11CC91D342B089C555C8C013 /* Resources */,
+				7B79AB2AAC5DA31CBF75D96A /* Sources */,
+				A1E51133D2C90925E5E13F73 /* Frameworks */,
+				85397A5F7EFB36D1B8FA389F /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "x-stb";
+			productName = "x-stb";
+			productReference = 2D9145439EB3E635547A9383 /* libx-stb-debug-macos-clang.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "x-stb" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 7F3C8F6E195903E065944DAE /* x-stb */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58D400C98ACD4B7B04AC8709 /* libx-stb-debug-macos-clang.a */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11CC91D342B089C555C8C013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B79AB2AAC5DA31CBF75D96A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E269598CF0A8D8AE222C3D8 /* stb_image.c in Sources */,
+				1ABC9D6C7222105E24302BAC /* stb_image_write.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D035BDD9D16F08F1F95221D /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++1z";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OBJROOT = "../_build_/debug-macos-clang/macos/debug/x-stb";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-mcpu=apple-m1",
+					"-Wall",
+					"-pthread",
+					"-Werror=vla",
+				);
+				OTHER_LDFLAGS = (
+					"-pthread",
+				);
+				SYMROOT = ../lib;
+				USER_HEADER_SEARCH_PATHS = (
+					stb/include,
+					glad/include,
+					glfw/include,
+				);
+			};
+			name = debug;
+		};
+		71B22178C917946A7B25AFB8 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../lib;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "x-stb-debug-macos-clang";
+			};
+			name = debug;
+		};
+		8FB1A15732FD2A894DCDF797 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++1z";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NDEBUG=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OBJROOT = "../_build_/release-macos-clang/macos/release/x-stb";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-mcpu=apple-m1",
+					"-Wall",
+					"-pthread",
+					"-Werror=vla",
+				);
+				OTHER_LDFLAGS = (
+					"-pthread",
+				);
+				SYMROOT = ../lib;
+				USER_HEADER_SEARCH_PATHS = (
+					stb/include,
+					glad/include,
+					glfw/include,
+				);
+			};
+			name = release;
+		};
+		ED837A72B41171E4221398B2 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../lib;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "x-stb-release-macos-clang";
+			};
+			name = release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "x-stb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D035BDD9D16F08F1F95221D /* debug */,
+				8FB1A15732FD2A894DCDF797 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		90205992C1045184D41C87D2 /* Build configuration list for PBXNativeTarget "libx-stb-debug-macos-clang.a" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71B22178C917946A7B25AFB8 /* debug */,
+				ED837A72B41171E4221398B2 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+/* End XCConfigurationList section */
+};
+rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
