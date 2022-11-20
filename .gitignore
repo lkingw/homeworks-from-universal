@@ -148,3 +148,4 @@ yarn-error.log*
 .doc
 .docx
 .ppt
+.Rproj.user
