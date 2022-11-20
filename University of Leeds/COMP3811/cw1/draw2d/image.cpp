@@ -6,7 +6,7 @@
 #include <cstdio>
 #include <cassert>
 
-#include "stb_image.h"
+#include <stb_image.h>
 
 #include "surface.hpp"
 
@@ -50,12 +50,23 @@ std::unique_ptr<ImageRGBA> load_image( char const* aPath )
 
 void blit_masked( Surface& aSurface, ImageRGBA const& aImage, Vec2f aPosition )
 {
-	//TODO: your implementation goes here
-	//TODO: your implementation goes here
-	//TODO: your implementation goes here
-	(void)aSurface;  // Avoid warnings about unused arguments until the
-	(void)aImage;    // function is properly implemented.
-	(void)aPosition;
+	int img_height = aImage.get_height(), img_width = aImage.get_width(); // get the height and width of the image
+	int win_height = aSurface.get_height(), win_width = aSurface.get_width(); // get the height and width of the window
+
+	for (int i  = 0; i < img_width; i++) { // iterate over all pixels in the image in column order
+		for (int j = 0; j < img_height; j++) { // iteratoe over each pixel in the chosen column
+			if (i > 0 && j > 0 && i <= img_width && j < img_height) { // check these coordinates are within the bounds of the image
+				if (i + aPosition.x > 0 && j + aPosition.y > 0 && i + aPosition.x < win_width && j + aPosition.y < win_height) {
+				// check if the position that the image is to be place is within the bounds of the window
+					ColorU8_sRGB_Alpha col= aImage.get_pixel(i, j); // get the TGBA values stored in the image
+					if (col.a > 128) { // only draw pixels with an alpha value higher than 128
+						aSurface.set_pixel_srgb(i + aPosition.x, j + aPosition.y, ColorU8_sRGB{col.r, col.g, col.b});
+						// set the corresponding pixel to the value from the image
+					}
+				}
+			}
+		}
+	}
 }
 
 namespace
