@@ -3,20 +3,20 @@ from util import getGeoDistance
 from flask_restful import Resource
 from flask import request
 
+
 def getSimilarity(headerList, name):
     candidates = []
     for header in headerList:
         headerName = header['name']
-        if(name in headerName['common']):
+        if(name.lower() in headerName['common'].lower()):
             base = len(headerName['common'])
             restOfHit = len(headerName['common'].replace(name, ''))
             header['similarity'] = (base - restOfHit) / base
             candidates.append(header)
 
     candidates.sort(key=lambda x: x.get('similarity'), reverse=True)
-    if len(candidates) > 0:
-        return candidates
-    return False
+    return candidates
+
 
 class NameRetriever(Resource):
 
@@ -25,7 +25,9 @@ class NameRetriever(Resource):
 
     def get(self, name):
         candidates = getSimilarity(self.database, name)
-        return candidates
+        if(len(candidates) > 0):
+            return candidates
+        else: return 'No matched result'
 
 
 class CountryList(Resource):
@@ -70,7 +72,7 @@ class DriveSideRetriever(Resource):
         self.database = getDatabase()
 
     def get(self, drive_side):
-        if drive_side not in ['left', 'right']:
+        if drive_side.lower() not in ['left', 'right']:
             return 'drive side should be left or right'
         candidates = []
         for country in self.database:
