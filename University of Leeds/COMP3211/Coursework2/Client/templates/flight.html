@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+<ul class="cw2-list">
+    {% if flights | length > 0 %}
+
+    {% for flight in flights %}
+    <li>{{ flight.flight.iataNumber }} - {{ flight.aircraft.iataCode }} - {{ flight.departure.icaoCode }} ---> {{ flight.arrival.icaoCode }}  {{ flight.status}} </li>
+         
+    </li>
+    {% endfor %}
+    {% else %}
+    <li>No Record Found</li>
+    {% endif %}
+</ul>
+
+{% endblock %}

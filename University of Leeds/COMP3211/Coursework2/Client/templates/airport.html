@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul class="cw2-list">
+    {% if airports| length > 0 %}
+        {% for airport in airports %}
+        <li>{{ airport.iata }} - {{ airport.region_name }} - {{ airport.airport }} -<a
+                href="{{ url_for('flight') }}?iata={{ airport.iata}}"> Airport Flight</a></li>
+        </li>
+        {% endfor %}
+    {% else %}
+    <li>No Record Found</li>
+    {% endif %}
+</ul>
+
+{% endblock %}

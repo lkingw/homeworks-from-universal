@@ -1,0 +1,34 @@
+A
+	B
+	C
+B
+	A
+	C
+C
+	A
+	B
+D
+	E
+E
+	D
+F
+	G
+G
+	F
+	H
+H
+	G
+	I
+I
+	H
+	G
+	J
+J
+	I
+K
+	L
+L
+	K
+	M
+M
+	L

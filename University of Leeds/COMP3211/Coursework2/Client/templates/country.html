@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul class="cw2-list">
+    {% if countries | length > 0 %}
+
+    {% for country in countries %}
+    <li>{{ country.name.common }} - {{ country.name.official }} - {{ country.distance }} - <a
+            href="{{ url_for('airport') }}?code={{ country.cca2}} "> Country airport</a></li>
+
+    </li>
+    {% endfor %}
+    {% else %}
+    <li>No Record Found</li>
+    {% endif %}
+</ul>
+
+{% endblock %}

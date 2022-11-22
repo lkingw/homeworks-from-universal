@@ -1,0 +1,22 @@
+A
+	B
+	C
+	D
+B
+	A
+C
+	A
+E
+	A
+D
+	A
+	E
+	F
+	G
+	H
+F
+	A
+H
+	A
+G
+	A
