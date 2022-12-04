@@ -1,0 +1,373 @@
+---
+title: "College Pathway Analytics"
+author: '[[ADD YOUR NAME, CORNELL ID]]'
+subtitle: 'INFO 4100 Learning Analytics'
+output:
+  html_document:
+    df_print: paged
+---
+
+In this homework, you will learn how to analyze enrollment record data to identify patterns that can inform policy decisions about an academic curriculum and what information to provide to students as they plan their courses. You are given a synthetic dataset with an authentic correlation structure for students who have graduated in one of three majors (major 1, 2, and 3).
+
+**Learning Objectives**
+
+1. Understand how course enrollment data is structured
+2. Identify hard course pairings using enrollment data
+3. Identify course-major relationships to give students feedback about path-dependencies
+
+**Scenario** 
+
+You are approached by a university administrator to provide input on upcoming policies about curriculum changes and information to students. You are asked to provide guidance on two high-level questions: 
+
+(1) Which courses should we advise students not to take in the same semester because it will be too difficult?
+
+(2) What can we tell students about how their first-year course choices influence their likely major?
+
+**Data**
+
+The synthetic dataset contains one record per student course enrollment. 
+
+|Variable|Data Type|Definition|
+|--------------|-------------|----------------------------------------------|
+|student_id|numeric|Unique student identifier|
+|major_id|numeric|Unique major identifier|
+|course_id|numeric|Unique course identifier|
+|term|numeric|Semester number in temporal order; e.g. 1=Fall 2017, 2=Spring 2018, 3=Fall 2018, etc.|
+
+```{r warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)
+load("info4100.hw.pathway.rda")
+```
+
+# Part 1. Understand the unique characteristics of course enrollment data
+
+**Question 1:** How many (a) unique students, (b) unique courses, and (c) unique terms are represented in the dataset?
+
+```{r}
+#######################################
+####### BEGIN INPUT: Question 1 #######
+#######################################
+
+# (a) unique students
+length(unique(a$student_id))
+
+# (b) unique courses
+length(unique(a$course_id))
+
+# (c) unique terms
+length(unique(a$term))
+
+#######################################
+#######################################
+```
+
+**Question 2:** What are the five most popular courses and how many students enrolled in each of them?
+
+```{r}
+#######################################
+####### BEGIN INPUT: Question 2 #######
+#######################################
+
+course_popularity <- a %>% group_by(course_id) %>% 
+  summarise(total_count=n(),
+            .groups = 'drop')
+
+course_popularity[order(course_popularity$total_count, decreasing = TRUE), ][1:5,]
+
+#######################################
+#######################################
+```
+
+**Question 3:** How many courses have more than 30 enrollment overall, and what percentage of all courses does this subject represent?
+
+```{r}
+#######################################
+####### BEGIN INPUT: Question 3 #######
+#######################################
+
+course_popularity %>% 
+  filter(total_count > 30)
+
+n_distinct(course_popularity$course_id)
+
+#######################################
+#######################################
+```
+
+**Question 4:** Plot the grade distribution across all courses as a histogram.
+
+```{r}
+#######################################
+####### BEGIN INPUT: Question 4 #######
+#######################################
+
+a %>% ggplot(aes(x=grade)) + geom_histogram(binwidth=.3)
+
+#######################################
+#######################################
+```
+
+**Question 5:** What is the average grade across all courses?
+
+```{r}
+#######################################
+####### BEGIN INPUT: Question 5 #######
+#######################################
+
+mean(a$grade)
+
+#######################################
+#######################################
+```
+
+
+# Part 2. Which course combinations are associated with lower grades when taken in the same semester?
+
+The goal is to identify course pairings that should be avoided because students have earned lower grades when taking them together compared to taking them some time apart.
+
+Before moving forward, it makes sense to narrow the set of observations to courses that are frequently chosen (say at least 20 times) and terms where a student took more than just one course. I do this for you in the code below. Work with the `tcp` dataframe for the rest of Part 2.
+
+```{r}
+tcp = a %>% 
+    group_by(course_id) %>% filter(n() > 20) %>%
+    group_by(student_id, term) %>% filter(n() > 1)
+```
+
+**Question 6:** For each student, for each term, identify all of their course pairings (i.e. if a student took courses A, B, and C in a term then the pairings are AB, BC, and AC). Use the `tcp` dataset. You can use two `for` loops nested over students and terms to achieve this. Use the `combn(x, m=2)` function to get all possible pairings for a vector `x`. To keep adding new rows of data to an existing dataframe as you loop, you can use `pairs = rbind(pairs, my.new.pairs)`. For all the pairings you identify, keep track of the student ID and term. You should get 7724 course pairs in total (or fewer, if you filter out student-course-term duplicates).
+
+```{r}
+pairs = data.frame()
+
+#######################################
+####### BEGIN INPUT: Question 6 #######
+#######################################
+
+courses <- tcp %>% group_by(student_id, term) %>% summarise(course = list(unique(course_id)))
+
+for (row in 1:nrow(courses)) {
+    enrolled <-  unlist(courses[row, 3])
+    if (length(enrolled) > 1) {
+      new_pairs <- data.frame(t(combn(enrolled, m=2)))
+      new_pairs$student_id <- apply(new_pairs, 1, function(x){
+        return(pull(courses[row, 1]))
+      })
+      new_pairs$term <- apply(new_pairs, 1, function(x){
+        return(pull(courses[row, 2]))
+      })
+      pairs <- rbind(pairs, new_pairs)
+    }
+}
+
+colnames(pairs) <- c('course_a','course_b', 'student_id', 'term')
+pairs
+#######################################
+#######################################
+```
+
+
+**Question 7:** For each pair of courses you found above, compute the average grade of the two courses that the student received. Use a `for` loop to go over each pair, get the grade out of `tcp` for both courses for that student in that term, and then average the two grades (Tip: be sure to use `mean(c(x,y))`, not `mean(x,y)`). You can save it in a new column in the `pairs` dataset. Note that in this dataset there are cases where the same course appears multiple times for the same student in the same term but with different grades (an artifact of noisy real-world data); to address this issue, compute the average grade for a given student/term/course, and then compute the grade for each student/term/pair of courses.
+
+```{r}
+pairs$avg_grade = NA
+
+#######################################
+####### BEGIN INPUT: Question 7 #######
+#######################################
+
+courses_score <- tcp %>% group_by(student_id, term, course_id) %>% summarise(avg_score = mean(c(grade)))
+a_scored <- left_join(pairs, courses_score, by=c('student_id'='student_id', 'term'='term', 'course_a' = 'course_id'))
+b_scored <- left_join(a_scored, courses_score, by=c('student_id'='student_id', 'term'='term', 'course_b' = 'course_id'))
+pairs$avg_grade <- rowMeans(b_scored[,c('avg_score.x', 'avg_score.y')], na.rm=TRUE)
+#######################################
+#######################################
+
+head(pairs)
+mean(pairs$avg_grade)
+```
+
+
+**Question 8:** Now aggregate your `pairs` dataset to have 1 row = 1 course pair, each with the average grade across all students/terms and the frequency of pair occurrence. You should use `group_by()` and `summarise()` for this computation. Ignore cases where it looks like a student took the same course twice in one term. Remove all course pairings that have come up less than 20 times. Be sure to count pairs independent of their order, i.e. 14 and 19 is the same pair as 19 and 14.
+
+```{r}
+#######################################
+####### BEGIN INPUT: Question 8 #######
+#######################################
+
+pair_score <- pairs %>% group_by(course_a = pmin(course_a, course_b), course_b = pmax(course_a, course_b)) %>% 
+  summarise(score = mean(c(avg_grade)), count = n()) %>% 
+  filter(count >= 20)
+
+head(pair_score)
+#######################################
+#######################################
+```
+
+**Question 9:** For each of the course pairs (i.e. use a `for` loop again), find students in the entire `a` dataframe who took both of those courses (i.e. `course_id %in% c(first, second)`) but not in the same term (i.e. `n_distinct(term) == 2`). Then compute the average grade for both courses for each student. And then average those average grades for each of the course pairs. Use the provided code to plot the average course-pair grade when it is taken in the same vs. different term
+
+```{r}
+same_term_pairs = data.frame()
+#######################################
+####### BEGIN INPUT: Question 9 #######
+#######################################
+
+same_term_courses <- a %>% group_by(student_id, term) %>% summarise(course = list(unique(course_id)))
+
+for (row in 1:nrow(same_term_courses)) {
+    enrolled <-  unlist(same_term_courses[row, 3])
+    if (length(enrolled) > 1) {
+      new_pairs <- data.frame(t(combn(enrolled, m=2)))
+      new_pairs$student_id <- apply(new_pairs, 1, function(x){
+        return(pull(same_term_courses[row, 1]))
+      })
+      new_pairs$term <- apply(new_pairs, 1, function(x){
+        return(pull(same_term_courses[row, 2]))
+      })
+      same_term_pairs <- rbind(same_term_pairs, new_pairs)
+    }
+}
+
+colnames(same_term_pairs) <- c('first','second', 'student_id', 'term')
+
+first_course_term <- inner_join(same_term_pairs, a, by=c('student_id'='student_id', 'first' = 'course_id'))
+
+colnames(first_course_term) <- c('first','second', 'student_id', 'orgin_term', 'major_id', 'first_term', 'grade')
+
+second_course_term <- inner_join(first_course_term, a, by=c('student_id'='student_id', 'second' = 'course_id', 'major_id' = 'major_id'))
+
+colnames(second_course_term) <- c('first','second', 'student_id', 'orgin_term', 'major_id', 'first_term', 'first_grade', 'second_term', 'second_grade')
+
+two_term_pair_score <- second_course_term %>% 
+  filter(first_term != second_term)
+
+two_term_pair_score$avg_grade <- rowMeans(two_term_pair_score[,c('first_grade', 'second_grade')], na.rm=TRUE)
+
+same_term_pair_score <- pairs %>% 
+  group_by(student_id, first = pmin(course_a, course_b), second = pmax(course_a, course_b)) %>% 
+  summarise(n_terms = n_distinct(term), term = term) %>% 
+  filter(n_terms < 2) %>% 
+  filter(first != second)
+
+a_scored <- left_join(same_term_pair_score, courses_score, by=c('student_id'='student_id', 'term'='term', 'first' = 'course_id'))
+b_scored <- left_join(a_scored, courses_score, by=c('student_id'='student_id', 'term'='term', 'second' = 'course_id'))
+same_term_pair_score$avg_grade <- rowMeans(b_scored[,c('avg_score.x', 'avg_score.y')], na.rm=TRUE)
+
+two_term_pair_score <- two_term_pair_score %>% 
+  group_by(first, second) %>% 
+  summarise(avg_grade = mean(avg_grade))
+
+same_term_pair_score <- same_term_pair_score %>% 
+  group_by(first, second) %>% 
+  summarise(avg_grade = mean(avg_grade))
+  
+pairs_agg <- two_term_pair_score %>% 
+  inner_join(same_term_pair_score, by=c("first", "second"))
+
+colnames(pairs_agg) <- c('first','second','unpaired_grade', 'paired_grade')
+
+# Compare the paired and unpaired average grade for each course pair. 
+plot(pairs_agg$paired_grade, pairs_agg$unpaired_grade); abline(0,1)
+
+#######################################
+#######################################
+```
+
+**Question 10:** For each course pair, calculate the difference in the grades students get when they take the courses in the same term vs. different terms. Based on this calculation, report which FOUR pairs of courses students should avoid taking in the same term the most because they have much lower average grades when taken in the same term.
+
+```{r}
+
+pairs_agg$diff = pairs_agg$unpaired_grade - pairs_agg$paired_grade
+#######################################
+####### BEGIN INPUT: Question 10 ######
+#######################################
+
+pairs_agg %>% 
+  filter(diff > 0)
+
+head(pairs_agg[order(pairs_agg$diff, decreasing = TRUE), ], 4)
+
+# Report the four pairs to avoid: 
+
+# 1. 282	980
+# 2. 185	806
+# 3. 186	806
+# 4. 302	349
+
+#######################################
+#######################################
+```
+
+# Part 2: How do students' first-year course choices influence their likely major?
+
+**Note:** I am showing you how to do this, so follow the code carefully, and at the end **there is one result interpretation question**. Don't forget to answer it and write your self-reflection below.
+
+For the courses that students commonly take in their first term, how does the choice of which ones they enroll in influence their likelihood of majoring in a field?
+
+```{r}
+# First, identify the most commonly taken courses in the student's first term for all students. 
+# This is relative to the student, not simply term=1. 
+# Define 'commonly taken' as over 20 first-term enrollments.
+comm = a %>% 
+    group_by(student_id) %>% 
+    filter(term == min(term)) %>% 
+    group_by(course_id) %>% 
+    count %>% 
+    filter(n > 20) %>% 
+    arrange(-n)
+
+# Second, compute the likelihood that a student majors in each of the three majors 
+# conditional on enrolling in the first term in each one of the classes identified above. 
+# Thus, you are computing 3 * number of classes probabilities.
+ftrm = a %>% 
+  group_by(student_id) %>% 
+  filter(term == min(term)) # keep each student's 1st term data
+
+major = data.frame()
+
+for(cr in comm$course_id) {
+  tmp.major = ftrm %>% 
+            filter(course_id == cr) %>%
+            group_by(student_id) %>%
+            slice(1) %>%
+            ungroup %>%
+            summarise(
+                course = cr,
+                major1 = mean(major_id == 1),
+                major2 = mean(major_id == 2),
+                major3 = mean(major_id == 3)
+            )
+  
+  major = rbind(major, tmp.major)
+}
+
+# Third, make a visualization that shows the likelihood of majoring in each major (1,2,3) 
+# after taking each of the identified courses in the first term. Try to make a bar plot 
+# with stacked bars for each course and color fill shows the major distribution.
+major_lng = gather(major, major, prob, 2:4)
+ggplot(major_lng, aes(reorder(course, prob, max), prob, fill = major)) + 
+    geom_bar(stat="identity") + coord_flip()
+```
+
+**Question 11:** Completing the statements below by interpreting the final plot above:
+
+```{r}
+#######################################
+####### BEGIN INPUT: Question 11 ######
+#######################################
+
+print("Students who take course 669 are most likely to major in major 3.")  
+print("Students who take course 425 are most likely to major in major 1.")
+print("Students who take course 421 have about equal probability of majoring in 1 and 3.")
+
+#######################################
+#######################################
+```
+
+# Self-reflection
+
+**Briefly summarize your experience on this homework. What was easy, what was hard, what did you learn?**
+
+- Insert your self-reflection here; it is used to improve the homework and course materials.
+
+# Submit Homework
+
+This is the end of the homework. Please **Knit a Doc(x) report** that shows both the R code and R output and upload it on the EdX platform. 
