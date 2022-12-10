@@ -1,17 +1,18 @@
 
 CREATE TABLE hourly_weather(
-   DATE timestamp PRIMARY KEY,
+   daytime datetime PRIMARY KEY,
    HourlyWindSpeed FLOAT,
    HourlyPrecipitation FLOAT
 );
 
 CREATE TABLE daily_weather(
-   DATE timestamp PRIMARY KEY,
+   daytime datetime PRIMARY KEY,
    DailyWindSpeed FLOAT,
    DailyPrecipitation FLOAT
 );
 
-CREATE TABLE taxis_trips(
+CREATE TABLE taxi_trips(
+   trip_id int PRIMARY KEY,
    pickup_datetime timestamp,
    tip_amount FLOAT,
    pickup_longitude DOUBLE,
@@ -22,6 +23,7 @@ CREATE TABLE taxis_trips(
 );
 
 CREATE TABLE uber_trips(
+   trip_id int PRIMARY KEY,
    pickup_datetime timestamp,
    pickup_longitude DOUBLE,
    pickup_latitude DOUBLE,

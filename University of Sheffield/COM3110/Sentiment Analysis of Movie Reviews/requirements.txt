@@ -1,0 +1,8 @@
+pandas
+numpy
+collections
+matplotlib
+nltk
+subprocess
+tool
+argparse
