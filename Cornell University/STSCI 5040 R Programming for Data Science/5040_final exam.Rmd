@@ -1,0 +1,601 @@
+---
+title: "Judy Li"
+author: "FINAL EXAM 3040/5040"
+date: "2022-12-14"
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+subtitle: wl632
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(warn = -1)
+
+library(stringr)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(readr)
+library(rvest)
+library(patchwork)
+```
+
+
+
+
+
+\newpage
+
+
+
+
+
+# Problem #1: RMD
+
+
+
+
+
+\newpage
+
+
+
+
+
+## Problem #2: HEADERS
+
+
+
+
+
+\newpage
+
+
+
+
+
+### Problem #3: Lists
+
+1. Asia
+2. Europe
+3. North America
+    + United States
+    + Canada
+4. South America
+5. Africa
+
+
+
+
+
+\newpage
+
+
+
+
+
+#### Problem #4: Fancy Text
+
+*Space: the final frontier.* These are the voyages of the ~starship~ ^Enterprise^. Its five-year mission: to explore strange new worlds. To seek out new life and new civilizations. **To boldly go where no man has gone before!**
+
+
+
+
+
+\newpage
+
+
+
+
+
+##### Problem #5: Code Chunks
+
+
+
+
+
+\newpage
+
+
+
+
+
+###### Problem #6: Packages
+
+
+
+
+
+\newpage
+
+
+
+
+
+# Problem #7: IMPORTING RDATA - LEAVES.RDATA
+
+```{r Q07 }
+# Load the LEAVES_3040 dataframe from the LEAVES.RDATA file
+load("./GET_LEAVES/LEAVES.RDATA")
+
+# Access the fiftieth row of the data
+fiftieth_row <- LEAVES_3040[50,]
+fiftieth_row 
+```
+
+
+
+
+
+\newpage
+
+
+
+
+
+# Problem #8: INLINE CODE - LEAVES_3040 - LEAVES.RDATA
+
+```{r Q08}
+# find the length of the leaf on the fiftieth line
+fiftieth_row$Length
+```
+
+
+
+
+
+\newpage
+
+
+
+
+
+# Problem #9: PLOTS A - LEAVES_3040 - LEAVES.RDATA
+
+```{r Q09, echo=FALSE, fig.width=4,fig.height=4}
+LEAVES_3040$Year <- factor(LEAVES_3040$Year)
+LEAVES_3040 <- mutate(LEAVES_3040, type=ifelse(Year %in% c("2022","2019"), "Highlighted", "Normal"))
+
+# create a boxplot using ggplot
+ggplot(LEAVES_3040, aes(x = Length, y = Year, fill=type, group = Year)) +
+  geom_boxplot(show.legend = FALSE) +
+  scale_fill_manual(values=c("red", "white")) +
+  labs(title = "Cornell LEAVES ( 2019 - 2022)",caption = "This is coded to be 4 x 4 inches." , x="Length", y="YEAR")
+```
+
+
+
+
+
+\newpage
+
+
+
+
+
+# Problem #10: Summary Statistics - LEAVES_3040 - LEAVES.RDATA
+
+```{r Q10 }
+
+# Group the data by shape, quad, and year
+grouped_data <- group_by(LEAVES_3040, Shape, Quad, Year)
+
+# Calculate the mean and standard deviation for the Length variable for each group
+summary_data <- summarize(grouped_data, mean = mean(Length),sd = sd(Length))
+
+summary_data
+```
+
+
+
+
+
+\newpage
+
+
+
+
+
+# Problem #11: PLOTS A - LEAVES_3040 - LEAVES.RDATA
+
+```{r Q11, fig.width=5, fig.height=4,echo=FALSE}
+stat_args <- group_by(LEAVES_3040, Quad, Year)
+stat_args <- summarize(stat_args, stats = c(mean(Length), max(Length), min(Length), median(Length)), Statistic = c('Average', 'Maximum', 'Minimum', 'Median'))
+
+# Plot the histograms with facets
+ggplot(LEAVES_3040, aes(Length)) +
+  geom_histogram(position="dodge", fill="red") +
+  facet_grid(Quad ~ Year) +
+  geom_point(aes(x=stats, color = Statistic), y=0, shape = 17, size = 2, data=stat_args) + 
+  theme(legend.position="right") +
+  labs(title = "Cornell LEAVES ( 2019 - 2022)",caption = "This is coded to be 4 x 5 inches.", x="Length", y="Frequency")
+
+```
+
+
+
+
+
+\newpage
+
+
+
+
+
+# Problem #12: PLOTS B - LEAVES_3040 - LEAVES.RDATA
+
+```{r Q12, fig.width=7,fig.height=2,echo=FALSE}
+Quad_newdata <- ifelse(LEAVES_3040$Quad == "AG", -0.2, 0.2)
+
+# create the first boxplot
+boxplot.1 <- ggplot(data = LEAVES_3040, mapping = aes(x = Quad_newdata, y = Length, fill = Quad))+
+  geom_boxplot(width = 0.35)+
+  scale_fill_manual(values = c("red","white"))+
+  scale_x_continuous(limits = c(-0.4,0.4), breaks = c(-0.2,0.0,0.2), labels = c("-0.2","0.0","0,2"))+
+  labs(title = "Boxplot",subtitle = "It is the lengths again.")+
+  xlab("")
+
+# create the second histogram
+histogram.2 <- ggplot(data = LEAVES_3040, mapping =aes(x= Length, fill= Quad))+
+  geom_histogram(position = "identity", alpha = 0.5)+ 
+  scale_fill_manual(values = c("red","white"))+
+  labs(title = "LEAVES_3040 Histogram",subtitle = "One behind the other")+
+  labs(title = "LEAVES_3040 Histogram",fill = "Quad")
+
+# create the third quantile plot
+quantile.3 <-ggplot(data = LEAVES_3040, aes(sample= Length, color= Quad)) +
+  geom_qq(alpha = 0.2 , distribution = stats::qnorm, dparams = list(mean= 0, sd = 1 ))+
+  geom_qq_line(distribution = stats::qnorm, dparams = list( mean= 0, sd = 1))+
+  facet_wrap(~LEAVES_3040$Quad)+
+  coord_flip()+
+  scale_color_manual(values = c("red","black"))+
+  labs(title = "Quantile Plot")+
+  xlab("theoretical")+
+  ylab("sample")
+ 
+# combine three plots into one
+boxplot.1 + histogram.2 + quantile.3
+
+```
+
+
+
+
+
+\newpage
+
+
+
+
+
+# Problem #13: FUNCTIONS A - LEAVES_3040 - LEAVES.RDATA
+
+```{r Q13 }
+problem.13 <- function(df){
+  number = 0
+  tear_shaped = df$Shape
+  # Compute the total number of leaves
+  for (i in (1:length(tear_shaped))){
+    if (tear_shaped[i] == "T"){ 
+      number = number + 1
+  } }
+  # Return the proportion of tear-shaped leaves
+  return ((number)/length(tear_shaped))
+}
+
+problem.13(LEAVES_3040)
+
+```
+
+
+
+
+
+\newpage
+
+
+
+
+
+# Problem #14: FUNCTIONS B - LEAVES_3040 - LEAVES.RDATA
+
+```{r Q14}
+problem.14 <- function(numeric.vector){
+length_of_vector = length(numeric.vector)
+ordered = sort(numeric.vector, decreasing = FALSE) 
+if (length_of_vector %% 2 ==1){ 
+  # compute the index of q1,median,q3 for vector with odd number of elements 
+  med_index = (length_of_vector + 1)/2  
+  q1_index = med_index/2 
+  q3_index = med_index + q1_index 
+  # compute the five number summary for vector with odd number of elements
+  min_val = ordered[1]
+  q1_val = (ordered[q1_index] + ordered[q1_index+1])/2
+  med_val = ordered[med_index]
+  q3_val = (ordered[q3_index] + ordered[q3_index-1])/2
+  max_val = ordered[length_of_vector]
+} 
+else{ 
+  #  compute the index of q1,median,q3 for vector with even number of elements 
+  med_index = (length_of_vector)/2 
+  q1_index = (med_index+1)/2 
+  q3_index = med_index + q1_index 
+  # compute the five number summary for vector with even number of elements
+  min_val = ordered[1]
+  q1_val = ordered[q1_index]
+  med_val =(ordered[med_index]+ordered[med_index+1])/2
+  q3_val = ordered[q3_index]
+  max_val = ordered[length_of_vector]
+}
+  return (c(min_val, q1_val, med_val, q3_val, max_val))
+}
+
+# compute the five number summary of the lengths of leaves in LEAVES_3040
+problem.14(LEAVES_3040$Length)
+```
+
+
+
+
+
+\newpage
+
+
+
+
+
+# Problem #15: Combining Data - FOUR YEARS DATA
+
+```{r Q15, echo=FALSE}
+base_URL = "http://jeremyentner.com/3040_Final_Data/CompactData/3010_LEAVES"
+
+# define URLs for the files
+years = c('2019', '2020', '2021', '2022')
+urls <- c("http://jeremyentner.com/3040_Final_Data/CompactData/3010_LEAVES2019.csv", 
+          "http://jeremyentner.com/3040_Final_Data/CompactData/3010_LEAVES2020.csv",
+          "http://jeremyentner.com/3040_Final_Data/CompactData/3010_LEAVES2021.csv",
+          "http://jeremyentner.com/3040_Final_Data/CompactData/3010_LEAVES2022.csv")
+
+# create empty list to store data frames
+data_frames <- list()
+
+# loop through URLs and read in each file as a data frame
+for (year in years) {
+  df <- read_csv(paste(c(base_URL, year, '.csv'), collapse=''), show_col_types = FALSE)
+  names(df) <- toupper(names(df))
+  if (year == '2019') { 
+    df <- mutate(df, SHAPE = as.character(T_NT))  
+  }
+  df <- mutate(df, STUDENT = as.character(STUDENT), YEAR = year)
+  data_frames[[year]] <- df
+}
+
+# combine data frames into a single data frame
+year_total <- c()
+shape_total <- c()
+
+for (i in (1:length(urls))) {
+  year_total <- append(year_total, data_frames[[i]]$YEAR)
+  shape_total <- append(shape_total, data_frames[[i]]$SHAPE)
+}
+
+combined_df <- data.frame(YEAR=year_total, SHAPE=shape_total)
+combined_df <- mutate(combined_df, SHAPE = ifelse(toupper(SHAPE) == 'T', "Tear", "Other"))
+combined_df <- drop_na(combined_df, YEAR)
+combined_df <- group_by(combined_df, YEAR, SHAPE)
+combined_df <- summarize(combined_df, total = n())
+
+# create stacked bar chart
+ggplot(combined_df, aes(x = YEAR, y = total, fill = SHAPE)) +
+  geom_bar(position="fill", stat="identity", color="black") + 
+  labs(title = "CORNELL LEAVES", y = "Proportion", x = "YEAR") +
+  scale_fill_manual(values = c("white", "red"), breaks=c('Tear', 'Other'))
+
+```
+
+
+
+
+
+\newpage
+
+
+
+
+
+# Problem #16: SCRAPING - PART 1
+
+```{r Q16, echo=FALSE}
+substrRight <- function(x, n){
+  substr(x, nchar(x)-n+1, nchar(x))
+}
+
+quadHandle <- function(x){
+  if_else(grepl("AG", x, fixed=TRUE), 'AG', "ART")
+}
+
+base_URL = "http://jeremyentner.com/3040_Final_Data/"
+
+# create empty list to store data frames
+data_frames <- list()
+
+scrape_hrefs <- function(url) {
+  # Read the HTML from the URL
+  html <- read_html(url)
+  
+  # Use CSS selectors to find all `a` tags on the page
+  a_tags <- html_nodes(html, "a")
+  
+  # Extract the `href` attribute from each `a` tag
+  hrefs <- html_attr(a_tags, "href")
+  
+  return(hrefs)
+}
+
+hrefs <- scrape_hrefs("http://jeremyentner.com/3040_Final_Data/HtmlExampleScraping1.html")
+
+# loop through URLs and read in each file as a data frame
+for (url in hrefs) {
+  first_year = substring(url, 0, 4)
+  last_year = sub(".csv", "", substrRight(url, 8))
+  if(startsWith(url, '2021') || startsWith(url, '2022')){
+    df <- read_csv(paste(c(base_URL, url), collapse=''), col_names = c('length','shape','date'), show_col_types = FALSE)
+    quad <- sub(".CSV", "", strsplit(url, "/")[[1]][2])
+    section <- sub(".CSV", "", strsplit(strsplit(url, "/")[[1]][2], "_")[[1]][2])
+    df <- mutate(df, year = first_year, quad = quad, section = section)
+  } else {
+    df <- read_csv(paste(c(base_URL, url), collapse=''), show_col_types = FALSE)
+    names(df) <- gsub(" ", "_", names(df))
+    df <- mutate(df, year = last_year)
+  }
+  
+  names(df) <- toupper(names(df))
+  if("LAB_SECTION" %in% names(df)){
+      df <- mutate(df, SECTION = LAB_SECTION)
+  }
+  
+  if (last_year == '2019') { 
+    df <- mutate(df, SHAPE = as.character(T_NT), LENGTH = LENGTHS, QUAD = AG_ART)  
+  }
+  
+  df <- mutate(df, QUAD = quadHandle(QUAD), SECTION = as.factor(SECTION))
+  data_frames[[url]] <- df
+}
+
+# combine data frames into a single data frame
+length_total <- c()
+year_total <- c()
+section_total <- c()
+quad_total <- c()
+
+for (i in (1:length(hrefs))) {
+  length_total <- append(length_total, data_frames[[i]]$LENGTH)
+  year_total <- append(year_total, data_frames[[i]]$YEAR)
+  section_total <- append(section_total, data_frames[[i]]$SECTION)
+  quad_total <- append(quad_total, data_frames[[i]]$QUAD)
+}
+
+combined_df <- data.frame(LENGTH=length_total, YEAR=year_total, SECTION=section_total, QUAD=quad_total)
+combined_df <- mutate(combined_df, SECTION = as.numeric(as.character(SECTION)))
+combined_df <- combined_df[order(combined_df$SECTION, decreasing = TRUE),]
+combined_df <- mutate(combined_df, SECTION = as.factor(SECTION))
+
+# Plot the scatterplot with facets
+ggplot(combined_df, aes(x=YEAR, y=LENGTH)) +
+  geom_jitter(aes(colour = SECTION),size=0.3) +
+  facet_grid(~QUAD) +
+  theme(legend.position="right") +
+  labs(title = "CORNELL LEAVES - NOT CORNELL COLORS", x="YEAR", y="LENGTH")
+
+```
+
+
+
+
+
+\newpage
+
+
+
+
+
+# Problem #17: SCRAPING - PART 2
+
+```{r Q17, echo=FALSE}
+quadHandle <- function(x){
+  if_else(grepl("AG", x, fixed=TRUE), 'AG', "ART")
+}
+
+base_URL = "http://jeremyentner.com/3040_Final_Data/"
+
+# create empty list to store data frames
+data_frames <- list()
+
+hrefs <- scrape_hrefs("http://jeremyentner.com/3040_Final_Data/HtmlExampleScraping2.html")
+
+
+# loop through URLs and read in each file as a data frame
+for (url in hrefs) {
+  first_year = substring(url, 0, 4)
+  last_year = sub(".csv", "", substrRight(url, 8))
+  if(startsWith(url, '2021') || startsWith(url, '2022')){
+
+    df <- read_csv(paste(c(base_URL, url), collapse=''), show_col_types = FALSE)
+    
+    if(length(names(df)) > 2) {
+      if ("...1" %in% names(df) || "Circle Number" %in% names(df)){
+        df <- select(df, 2:4)
+      }
+      df <- select(df, 1:3)
+      names(df) <- c('length','shape','date')
+    }
+    else {
+      names(df) <- c('length','shape')
+    }
+  
+    quad <- sub(".CSV", "", strsplit(url, "/")[[1]][2])
+    section <- sub(".CSV", "", strsplit(strsplit(url, "/")[[1]][2], "_")[[1]][2])
+    df <- mutate(df, year = first_year, quad = quad, section = section, length = as.numeric(gsub("[^0-9.-]", "", length)))
+  } else {
+    df <- read_csv(paste(c(base_URL, url), collapse=''), show_col_types = FALSE)
+    df <- mutate(df, year = last_year)
+  }
+  
+  names(df) <- gsub(" ", "_", toupper(names(df)))
+
+  if("LAB_SECTION" %in% names(df)){
+      df <- mutate(df, SECTION = LAB_SECTION)
+  }
+  
+  if (last_year == '2019') { 
+    df <- mutate(df, SHAPE = as.character(T_NT), LENGTH = LENGTHS, QUAD = AG_ART)  
+  }
+  
+  df <- mutate(df, QUAD = quadHandle(QUAD), SECTION = as.factor(SECTION), SHAPE = as.factor(SHAPE))
+  data_frames[[url]] <- df
+}
+
+# combine data frames into a single data frame
+length_total <- c()
+year_total <- c()
+section_total <- c()
+shape_total <- c()
+
+for (i in (1:length(hrefs))) {
+  length_total <- append(length_total, data_frames[[i]]$LENGTH)
+  year_total <- append(year_total, data_frames[[i]]$YEAR)
+  section_total <- append(section_total, data_frames[[i]]$SECTION)
+  shape_total <- append(shape_total, data_frames[[i]]$SHAPE)
+}
+
+combined_df <- data.frame(LENGTH=length_total, YEAR=year_total, SECTION=section_total, SHAPE=shape_total)
+combined_df <- mutate(combined_df, SHAPE = toupper(SHAPE), SECTION = as.numeric(as.character(SECTION)))
+combined_df <- drop_na(combined_df, LENGTH, SECTION)
+combined_df <- combined_df[order(combined_df$SECTION, decreasing = TRUE),]
+combined_df <- mutate(combined_df, SHAPE = ifelse(toupper(SHAPE) == 'T', "Tear", "Other"))
+
+# Plot the bar chart with facets
+ggplot(combined_df, aes(x = LENGTH, fill = SHAPE)) + 
+  geom_histogram(color="black") +
+  facet_wrap(~ SECTION) + 
+  labs(title = "Cornell LEAVES (2019-2022)", x="Length", y="Frequency") + 
+  scale_fill_manual(values = c("white", " red"), breaks=c('Tear', 'Other'))
+  
+```
+
+
+
+
+
+\newpage
+
+
+
+
+
+# Problem #18 - Submission
+
+I submitted it to GRADESCOPE. I submitted it to CANVAS.

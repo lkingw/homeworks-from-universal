@@ -374,6 +374,10 @@ Organise your code as you find fit, aim for clarity in communication.
 ------------------------------------------------------------------------
 
 ```{R}
+options(warn = -1)
+```
+
+```{R}
 library(tidyverse)
 library(tidytext)
 library(quanteda)
